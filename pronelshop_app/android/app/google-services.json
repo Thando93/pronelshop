@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "447430717117",
+    "project_id": "pronelshop",
+    "storage_bucket": "pronelshop.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:447430717117:android:adc244af3b4805fc6bd1d4",
+        "android_client_info": {
+          "package_name": "com.pronelprojects.pronelshop_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-gnFDUaMYOp-1zElku0oRZixNmxLMJ1c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
