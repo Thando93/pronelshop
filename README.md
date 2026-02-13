@@ -18,12 +18,41 @@ flutter analyze
 flutter run
 ```
 
-## CI
+## Navigation
 
-A GitHub Actions workflow runs `flutter pub get`, `flutter analyze` and `flutter test` on pushes and PRs. The workflow file is at `.github/workflows/flutter-analyze.yml`.
+The app features a tabbed bottom navigation bar with:
+- **Home** — Welcome screen
+- **Search** — Product search
+- **Products** — Browse products catalog
+- **Cart** — Shopping cart
+- **Account** — User account settings
 
-## Notes
+## CI/CD
 
-- If `flutter` is not available in your environment, follow the official install guide above.
-- If you want, I can add more CI jobs (build, format check, platform-specific tests).
+Two GitHub Actions workflows are configured:
+
+1. **Flutter CI** (`.github/workflows/flutter-analyze.yml`): Runs on push and PRs
+   - Installs dependencies
+   - Runs `flutter analyze`
+   - Runs `flutter test`
+
+2. **Firebase Deploy** (`.github/workflows/firebase-deploy.yml`): Builds and deploys web version on main branch push
+   - Builds Flutter web release
+   - Deploys to Firebase Hosting
+
+### Setup Firebase Hosting
+
+To enable Firebase deployment, add these secrets to your GitHub repository settings:
+- `FIREBASE_SERVICE_ACCOUNT` — Service account JSON (download from Firebase Console)
+
+## Deployment
+
+**Web:** The app auto-deploys to Firebase Hosting when you push to `main`. Visit your Firebase project URL once set up.
+
+**Mobile:** Run locally with:
+```bash
+cd pronelshop_app
+flutter run -d android    # Android
+flutter run -d ios        # iOS
+```
 
